@@ -1,7 +1,4 @@
 import org.example.TestBase;
-
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -30,9 +27,8 @@ public class LoginTest extends TestBase {
 
         Thread.sleep(500);
 
-
-        Assert.assertTrue(driver.getCurrentUrl().equals(baseUrl + "prijava"),
-                "Došli smo na URL: " + driver.getCurrentUrl());
+        // 5. Provjeri vraca li nas na prijavu
+        Assert.assertEquals(baseUrl + "prijava", driver.getCurrentUrl(), "Došli smo na URL: " + driver.getCurrentUrl());
 
     }
 }
