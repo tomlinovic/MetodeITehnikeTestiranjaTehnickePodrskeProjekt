@@ -9,7 +9,7 @@ public class TestContactPage extends TestBase{
     public void testContactPage() throws InterruptedException{
         // 1. Otvori stranicu za prijavu
         driver.get(baseUrl);
-
+        Thread.sleep(500);
         // 2. Klikni na kontakt gumb
         driver.findElement(By.xpath("/html//div[@class='grid']//a[@href='/kontakt']"))
                 .click();
@@ -17,6 +17,7 @@ public class TestContactPage extends TestBase{
 
         // 3. Provjeri otvara li kontakt stranicu
         Assert.assertEquals(baseUrl + "kontakt", driver.getCurrentUrl(), "Došli smo na URL: " + driver.getCurrentUrl());
+        Thread.sleep(500);
 
         //4. Provjerava postoji li email ispisan na stranici
         WebElement emailElement = driver.findElement(By.xpath("/html//div[@class='grid']//p[.='Email: senior.briga@senior.hr']"));
