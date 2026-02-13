@@ -3,7 +3,7 @@
 <suite name="AllTestsSuite">
  <test name="My First Selenium TestNG Test">
  <classes>
- <class name="FirstTest"/>
+ <class name="LoginTest"/>
  </classes>
  </test>
 </suite>
